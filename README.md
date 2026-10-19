@@ -1,5 +1,5 @@
 # LAPORAN PRAKTIKUM PEMROGRAMAN WEB
-## Pertemuan 6 — JavaScript Dasar
+## Praktikum 5 — JavaScript Dasar
 
 ### A. Identitas Praktikum
 
