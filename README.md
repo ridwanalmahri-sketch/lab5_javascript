@@ -29,7 +29,7 @@ Praktikum ini bertujuan untuk memahami dasar-dasar JavaScript, mulai dari menamp
 
 ### D. Langkah Menjalankan Program
 
-1. Buat folder `Lab5Web`.
+1. Buat folder `Lab5javascript`.
 2. Simpan kode HTML dengan nama `index.html`.
 3. Simpan kode JavaScript dengan nama `script.js`.
 4. Pastikan file HTML memanggil JavaScript menggunakan `<script src="script.js"></script>`.
