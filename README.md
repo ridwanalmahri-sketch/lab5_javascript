@@ -109,7 +109,12 @@ Jika nama yang dimasukkan adalah Andi, program menampilkan `Halo, Andi!` dan tek
 
 **Screenshot:**
 
-![Latihan 2](screenshots/latihan-2.png)
+<img width="1919" height="310" alt="Screenshot 2026-10-19 140624" src="https://github.com/user-attachments/assets/a8714b67-c86c-41f9-b523-d24f779c91ad" />
+
+<img width="1918" height="245" alt="Screenshot 2026-10-19 140651" src="https://github.com/user-attachments/assets/98608726-e9b9-4ece-b468-6dd5c2fa2fd7" />
+
+<img width="1919" height="352" alt="Screenshot 2026-10-19 192958" src="https://github.com/user-attachments/assets/172d79c3-f145-4a08-b4b2-0085e24743c8" />
+
 
 ### 3. Latihan 3 — Function dan Operasi Aritmetika
 
@@ -155,7 +160,8 @@ Function `operasiDasar(a, b)` menerima dua parameter dan menghitung lima operasi
 
 **Screenshot:**
 
-![Latihan 3](screenshots/latihan-3.png)
+<img width="1914" height="115" alt="Screenshot 2026-10-19 193045" src="https://github.com/user-attachments/assets/de2e632f-46b1-42e6-bcde-8c35b6d8a2af" />
+
 
 ### 4. Latihan 4 — Seleksi Kondisi if–else
 
@@ -205,7 +211,12 @@ Program meminta nilai menggunakan `prompt()`, lalu mengubah input menjadi number
 
 **Screenshot:**
 
-![Latihan 4](screenshots/latihan-4.png)
+<img width="1919" height="277" alt="Screenshot 2026-10-19 141025" src="https://github.com/user-attachments/assets/ddc75c14-9e90-41e2-866d-481471ef1c4d" />
+
+<img width="1918" height="240" alt="Screenshot 2026-10-19 141048" src="https://github.com/user-attachments/assets/e4134dd7-b5a5-4281-b773-50f580c6e085" />
+
+<img width="1919" height="250" alt="Screenshot 2026-10-19 193308" src="https://github.com/user-attachments/assets/52a7c1bf-7270-4ec3-b9f7-7a734c8353a4" />
+
 
 ### 5. Latihan 5 — Seleksi Kondisi switch
 
@@ -255,7 +266,10 @@ Input `3` menampilkan `Bilangan tiga`. Input selain 1–5 menampilkan `Pilihan t
 
 **Screenshot:**
 
-![Latihan 5](screenshots/latihan-5.png)
+<img width="1919" height="228" alt="Screenshot 2026-10-19 193435" src="https://github.com/user-attachments/assets/ad4ed68d-8b29-49bc-8886-ea80dc15226b" />
+
+<img width="1919" height="235" alt="Screenshot 2026-10-19 193445" src="https://github.com/user-attachments/assets/51ec59f8-ee10-4fd8-ac17-00e72122e17e" />
+
 
 ### 6. Latihan 6 — Bilangan Genap atau Ganjil
 
@@ -305,7 +319,9 @@ HTML menyediakan input bilangan dan tombol pemeriksaan. JavaScript menggunakan `
 
 **Screenshot:**
 
-![Latihan 6](screenshots/latihan-6.png)
+<img width="1919" height="122" alt="Screenshot 2026-10-19 193549" src="https://github.com/user-attachments/assets/7064e9bc-ab31-49ad-a63d-30d522e84866" />
+
+<img width="1919" height="124" alt="Screenshot 2026-10-19 193625" src="https://github.com/user-attachments/assets/dbfae1c3-adff-4bd8-a2d7-b7946277679e" />
 
 ### 7. Latihan 7 — Mengubah Warna Halaman
 
