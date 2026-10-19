@@ -10,10 +10,9 @@
 - Repository: `Lab5JavaScript`
 
 file yang digunakan praktikum `Lab5JavaScript`:
-- `index.html`
-- `script.js`
-- `README.md`
-- Folder `screenshots`
+
+<img width="264" height="122" alt="Screenshot 2026-10-19 195419" src="https://github.com/user-attachments/assets/ccc3c123-3733-4a1a-ac19-19d1a805bb7b" />
+
 
 ### B. Tujuan Praktikum
 
