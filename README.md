@@ -70,7 +70,7 @@ function latihan1() {
 
 **Screenshot:**
 
-![Latihan 1](screenshots/latihan-1.png)
+<img width="1919" height="277" alt="Screenshot 2026-10-19 192620" src="https://github.com/user-attachments/assets/69afce28-e0bd-47a0-a1e6-1577e63fc50d" />
 
 ### 2. Latihan 2 — Alert dan Prompt
 
