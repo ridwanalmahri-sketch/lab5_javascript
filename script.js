@@ -1,17 +1,30 @@
-// script.js
-document.getElementById("pesan").textContent = "Hello World";
-console.log("Hello World");
 
-// Alert dan prompt
-const namaPengguna = prompt("Masukkan nama Anda:", "");
-if (namaPengguna && namaPengguna.trim() !== "") {
-alert("Halo, " + namaPengguna + "!");
-document.getElementById("pesan").textContent = "Selamat datang, " + namaPengguna + ".";
-} else {
-alert("Nama belum diisi.");
+
+// LATIHAN 1 - MENAMPILKAN OUTPUT
+function latihan1() {
+    document.getElementById("pesan").textContent = "Hello World";
+    console.log("Hello World");
 }
 
-// Function dan operasi aritmetika
+
+
+// LATIHAN 2 - ALERT DAN PROMPT
+
+function latihan2() {
+    const namaPengguna = prompt("Masukkan nama Anda:", "");
+
+    if (namaPengguna && namaPengguna.trim() !== "") {
+        alert("Halo, " + namaPengguna + "!");
+        document.getElementById("pesan").textContent =
+            "Selamat datang, " + namaPengguna + ".";
+    } else {
+        alert("Nama belum diisi.");
+    }
+}
+
+
+// LATIHAN 3 - FUNCTION DAN ARITMETIKA
+
 function operasiDasar(a, b) {
     console.log("Penjumlahan:", a + b);
     console.log("Pengurangan:", a - b);
@@ -19,67 +32,109 @@ function operasiDasar(a, b) {
     console.log("Pembagian:", b !== 0 ? a / b : "Tidak dapat dibagi nol");
     console.log("Modulus:", a % b);
 }
-operasiDasar(9, 4);
 
-// — Seleksi kondisi if–else
-const inputNilai = prompt("Masukkan nilai (0–100):");
-const nilaiMahasiswa = Number(inputNilai);
-
-if (inputNilai === null || inputNilai.trim() === "" ||
-    Number.isNaN(nilaiMahasiswa) || nilaiMahasiswa < 0 || nilaiMahasiswa > 100) {
-alert("Input nilai tidak valid.");
-} else if (nilaiMahasiswa >= 60) {
-alert("Lulus");
-} else {
-alert("Belum lulus");
+function latihan3() {
+    operasiDasar(9, 4);
 }
 
-// Seleksi kondisi switch
-const inputPilihan = prompt("Masukkan angka 1–5:");
-switch (inputPilihan) {
-    case "1": alert("Bilangan satu"); break;
-    case "2": alert("Bilangan dua"); break;
-    case "3": alert("Bilangan tiga"); break;
-    case "4": alert("Bilangan empat"); break;
-    case "5": alert("Bilangan lima"); break;
-    default: alert("Pilihan tidak tersedia");
+
+// LATIHAN 4 - IF ELSE
+
+function latihan4() {
+    const inputNilai = prompt("Masukkan nilai (0–100):");
+    const nilaiMahasiswa = Number(inputNilai);
+
+    if (
+        inputNilai === null ||
+        inputNilai.trim() === "" ||
+        Number.isNaN(nilaiMahasiswa) ||
+        nilaiMahasiswa < 0 ||
+        nilaiMahasiswa > 100
+    ) {
+        alert("Input nilai tidak valid.");
+    } else if (nilaiMahasiswa >= 60) {
+        alert("Lulus");
+    } else {
+        alert("Belum lulus");
+    }
 }
 
-// Form bilangan genap atau ganjil
-function cekBilangan() {
-    const input = document.getElementById("bilangan").value;
-    const angka = Number(input);
-    const hasil = document.getElementById("hasilBilangan");
-if (input.trim() === "" || !Number.isInteger(angka)) {
-    hasil.textContent = "Masukkan bilangan bulat yang valid.";
-} else if (angka % 2 === 0) {
-    hasil.textContent = "Bilangan genap";
-} else {
-    hasil.textContent = "Bilangan ganjil";
+// LATIHAN 5 - SWITCH
+
+function latihan5() {
+    const inputPilihan = prompt("Masukkan angka 1–5:");
+
+    switch (inputPilihan) {
+        case "1":
+            alert("Bilangan satu");
+            break;
+        case "2":
+            alert("Bilangan dua");
+            break;
+        case "3":
+            alert("Bilangan tiga");
+            break;
+        case "4":
+            alert("Bilangan empat");
+            break;
+        case "5":
+            alert("Bilangan lima");
+            break;
+        default:
+            alert("Pilihan tidak tersedia");
     }
 }
 
 
-// Mengubah warna latar belakang
+//  LATIHAN 6 - BILANGAN GENAP ATAU GANJIL
+
+function cekBilangan() {
+    const input = document.getElementById("bilangan").value;
+    const angka = Number(input);
+    const hasil = document.getElementById("hasilBilangan");
+
+    if (input.trim() === "" || !Number.isInteger(angka)) {
+        hasil.textContent = "Masukkan bilangan bulat yang valid.";
+    } else if (angka % 2 === 0) {
+        hasil.textContent = "Bilangan genap";
+    } else {
+        hasil.textContent = "Bilangan ganjil";
+    }
+}
+
+
+
+ //  LATIHAN 7 - MENGUBAH WARNA HALAMAN
 function ubahWarnaLatar(warna) {
     document.body.style.backgroundColor = warna;
 }
 
-// DOM dan checkbox menu makanan
+
+
+// LATIHAN 8 - CHECKBOX MENU MAKANAN
+
 const daftarMenu = document.querySelectorAll(".menu");
+
 daftarMenu.forEach((item) => {
     item.addEventListener("change", hitungTotal);
 });
 
 function hitungTotal() {
     let total = 0;
+
     daftarMenu.forEach((item) => {
-        if (item.checked) total += Number(item.value);
+        if (item.checked) {
+            total += Number(item.value);
+        }
     });
-    document.getElementById("total").textContent = total.toLocaleString("id-ID");
+
+    document.getElementById("total").textContent =
+        total.toLocaleString("id-ID");
 }
 
-// Project: Kalkulator Nilai
+
+//   MINI PROJECT - KALKULATOR NILAI
+
 function hitungNilaiAkhir(tugas, uts, uas) {
     return tugas * 0.30 + uts * 0.30 + uas * 0.40;
 }
@@ -140,7 +195,9 @@ document.getElementById("formNilai").addEventListener("submit", function(event) 
     console.log("Status:", status);
 });
 
-// Ekperimen mandiri 1 Menginput dua bilangan dari prompt
+
+   // EKSPERIMEN MANDIRI NOMOR 1 INPUT DUA BILANGAN DARI PROMPT
+ 
 function eksperimenAritmetika() {
     const inputA = prompt("Masukkan bilangan pertama:");
 
@@ -168,7 +225,17 @@ function eksperimenAritmetika() {
 }
 
 
-// Ekperimen mandiri 8 Funtion cek genap
+// EKSPERIMEN MANDIRI NOMOR 7 TABEL PERKALIAN ANGKA 7
+
+function tabelPerkalian() {
+    for (let i = 1; i <= 10; i++) {
+        console.log("7 x " + i + " = " + (7 * i));
+    }
+}
+
+
+// EKSPERIMEN MANDIRI NOMOR 8 FUNCTION CEK GENAP
+
 function cekGenap(angka) {
     return Number.isInteger(angka) && angka % 2 === 0;
 }
@@ -179,7 +246,9 @@ function ujiGenap() {
     console.log("0 genap:", cekGenap(0));
 }
 
-// Ekperimen mandiri 9 Validasi from
+
+//  EKSPERIMEN MANDIRI NOMOR 9 VALIDASI FORM
+ 
 document.getElementById("formValidasi").addEventListener("submit", function(event) {
     event.preventDefault();
 
@@ -202,7 +271,10 @@ document.getElementById("formValidasi").addEventListener("submit", function(even
     }
 });
 
-// Ekperimen mandiri 11 Sembunyikan dan tampilkan teks
+
+
+//  EKSPERIMEN MANDIRI NOMOR 11 SEMBUNYIKAN / TAMPILKAN TEKS
+ 
 function toggleTeks() {
     const teks = document.getElementById("teksEksperimen");
 
