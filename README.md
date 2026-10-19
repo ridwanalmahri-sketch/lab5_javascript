@@ -43,19 +43,20 @@ Praktikum ini bertujuan untuk memahami dasar-dasar JavaScript, mulai dari menamp
 **Kode program (`script.js`):**
 
 ```javascript
-<img width="1326" height="143" alt="Screenshot 2026-10-19 135216" src="https://github.com/user-attachments/assets/741a0f34-24b2-4f34-99fa-35632beff361" />
-
-<img width="1919" height="213" alt="Screenshot 2026-10-19 135252" src="https://github.com/user-attachments/assets/39772256-d5a9-4660-ba71-c56b31dac0d3" />
+function latihan1() {
+    document.getElementById("pesan").textContent = "Hello World";
+    console.log("Hello World");
+}
 
 ```
 
 **Elemen HTML:**
 
 ```html
-<img width="1465" height="46" alt="Screenshot 2026-10-19 192142" src="https://github.com/user-attachments/assets/60dbf7a7-f509-4a10-916e-55e232bac855" />
-
-<img width="482" height="198" alt="Screenshot 2026-10-19 192230" src="https://github.com/user-attachments/assets/1bfc9a44-aecb-48c9-ac10-bb2d73963b1e" />
-
+<p id="pesan">Teks awal</p>
+<button type="button" onclick="latihan1()">
+    Jalankan Latihan 1
+</button>
 ```
 
 **Penjelasan:**
