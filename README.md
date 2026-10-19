@@ -9,6 +9,12 @@
 - Mata Kuliah: Pemrograman Web
 - Repository: `Lab5JavaScript`
 
+file yang digunakan praktikum `Lab5JavaScript`:
+- `index.html`
+- `script.js`
+- `README.md`
+- Folder `screenshots`
+
 ### B. Tujuan Praktikum
 
 Praktikum ini bertujuan untuk memahami dasar-dasar JavaScript, mulai dari menampilkan output, menerima input pengguna, operasi aritmetika, percabangan, function, manipulasi DOM, event listener, validasi form, hingga perulangan.
@@ -361,7 +367,12 @@ Latar halaman berubah menjadi hijau muda, putih, atau kuning muda sesuai tombol 
 
 **Screenshot:**
 
-![Latihan 7](screenshots/latihan-7.png)
+<img width="1913" height="85" alt="Screenshot 2026-10-19 193903" src="https://github.com/user-attachments/assets/6f265825-1a8c-4c98-8767-a5f165daa40e" />
+
+<img width="1919" height="95" alt="Screenshot 2026-10-19 193757" src="https://github.com/user-attachments/assets/8aa010a3-1942-4d34-9e5a-b3f18821dff7" />
+
+<img width="1919" height="85" alt="Screenshot 2026-10-19 193747" src="https://github.com/user-attachments/assets/d91ff22a-5d57-4051-abef-9bb2d4197bd5" />
+
 
 ### 8. Latihan 8 — DOM dan Checkbox Menu Makanan
 
@@ -433,7 +444,10 @@ Dua menu tambahan pada Eksperimen Mandiri, yaitu Bakwan Rp3.000 dan Es Teh Rp4.0
 
 **Screenshot:**
 
-![Latihan 8](screenshots/latihan-8.png)
+<img width="1919" height="197" alt="Screenshot 2026-10-19 194038" src="https://github.com/user-attachments/assets/042523ff-9444-4cec-9c9e-ba1cf1096705" />
+
+<img width="1919" height="122" alt="Screenshot 2026-10-19 194050" src="https://github.com/user-attachments/assets/43535ed6-9ba3-4686-85db-a75b0b691736" />
+
 
 ---
 
@@ -495,11 +509,14 @@ Nilai akhir dihitung dengan bobot tugas 30%, UTS 30%, dan UAS 40%. Function `ten
 
 **Screenshot pengujian:**
 
-![Mini Project - Pengujian 1](screenshots/mini-project-1.png)
+<img width="1919" height="362" alt="Screenshot 2026-10-19 194237" src="https://github.com/user-attachments/assets/696f8b42-6cb2-48e6-8080-58a7e3a7ba88" />
 
-![Mini Project - Pengujian 2](screenshots/mini-project-2.png)
 
-![Mini Project - Pengujian 3](screenshots/mini-project-3.png)
+<img width="1919" height="363" alt="Screenshot 2026-10-19 194405" src="https://github.com/user-attachments/assets/8360749e-e8c3-43ef-86ce-1d6771c720bc" />
+
+
+<img width="1919" height="362" alt="Screenshot 2026-10-19 194508" src="https://github.com/user-attachments/assets/dd70424e-a5e1-47e0-8458-de15436bb5a5" />
+
 
 ---
 
@@ -541,7 +558,8 @@ function eksperimenAritmetika() {
 
 **Hasil:** seluruh operasi aritmetika ditampilkan pada Console.
 
-![Eksperimen 1](screenshots/eksperimen-1.png)
+<img width="1919" height="369" alt="Screenshot 2026-10-19 194616" src="https://github.com/user-attachments/assets/54fa6249-97a7-4ae8-922f-e1aee1e8097a" />
+
 
 ### 2. Nomor 7 — Tabel Perkalian Angka 7
 
@@ -559,7 +577,8 @@ function tabelPerkalian() {
 
 **Hasil yang diharapkan:** Console menampilkan `7 x 1 = 7` sampai `7 x 10 = 70`.
 
-![Eksperimen 7](screenshots/eksperimen-7.png)
+<img width="1919" height="116" alt="Screenshot 2026-10-19 194740" src="https://github.com/user-attachments/assets/6525360f-4eaa-4dc7-8d89-a6f143d0126f" />
+
 
 ### 3. Nomor 8 — Function cekGenap()
 
@@ -581,7 +600,8 @@ function ujiGenap() {
 
 **Hasil pengujian:** angka 4 menghasilkan `true`, angka 7 menghasilkan `false`, dan angka 0 menghasilkan `true`.
 
-![Eksperimen 8](screenshots/eksperimen-8.png)
+<img width="1919" height="124" alt="Screenshot 2026-10-19 194826" src="https://github.com/user-attachments/assets/673c8c2e-55df-4857-8931-bb1e767586c5" />
+
 
 ### 4. Nomor 9 — Validasi Form
 
@@ -615,7 +635,8 @@ document.getElementById("formValidasi").addEventListener("submit", function(even
 
 **Hasil:** data valid menampilkan informasi nama dan nilai. Input kosong atau nilai di luar rentang menampilkan pesan kesalahan.
 
-![Eksperimen 9](screenshots/eksperimen-9.png)
+<img width="1919" height="203" alt="Screenshot 2026-10-19 194904" src="https://github.com/user-attachments/assets/9520442e-b579-4e51-af70-8cd1f1712f60" />
+
 
 ### 5. Nomor 10 — Penambahan Menu Makanan
 
@@ -639,7 +660,10 @@ document.getElementById("formValidasi").addEventListener("submit", function(even
 
 **Hasil:** ketika Bakwan dipilih, total bertambah Rp3.000. Ketika Es Teh dipilih, total bertambah Rp4.000.
 
-![Eksperimen 10](screenshots/eksperimen-10.png)
+<img width="1900" height="193" alt="Screenshot 2026-10-19 194957" src="https://github.com/user-attachments/assets/b0f09586-194f-4489-829a-1b04f2b8dd35" />
+
+<img width="1898" height="173" alt="Screenshot 2026-10-19 195013" src="https://github.com/user-attachments/assets/0bc5ca3b-67e9-4c08-9edf-01df3c509613" />
+
 
 ### 6. Nomor 11 — Menyembunyikan dan Menampilkan Elemen
 
@@ -671,7 +695,10 @@ function toggleTeks() {
 
 **Hasil:** teks menghilang saat tombol ditekan dan dapat ditampilkan kembali dengan menekan tombol tersebut sekali lagi.
 
-![Eksperimen 11](screenshots/eksperimen-11.png)
+<img width="1919" height="112" alt="Screenshot 2026-10-19 195110" src="https://github.com/user-attachments/assets/757459f8-5719-4d46-a028-e83212162d62" />
+
+<img width="1919" height="78" alt="Screenshot 2026-10-19 195119" src="https://github.com/user-attachments/assets/79d6700b-07a2-4139-9ae0-4454a476e9d0" />
+
 
 ---
 
@@ -681,13 +708,3 @@ Praktikum ini memperkenalkan penggunaan JavaScript untuk membuat halaman web yan
 
 Mini project menunjukkan penerapan JavaScript untuk menghitung nilai akhir mahasiswa, menentukan predikat, serta memeriksa status kelulusan berdasarkan ketentuan nilai.
 
-## I. Pengumpulan
-
-File yang dikumpulkan dalam repository `Lab5Web`:
-
-- `index.html`
-- `script.js`
-- `README.md`
-- Folder `screenshots`
-
-**URL Repository GitHub:** [Masukkan URL repository di sini]
