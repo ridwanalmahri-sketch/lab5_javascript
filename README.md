@@ -1,151 +1,474 @@
-# Praktikum Pemrograman Web - Pertemuan 6
-## JavaScript Dasar
+# LAPORAN PRAKTIKUM PEMROGRAMAN WEB
+## Pertemuan 6 — JavaScript Dasar
 
 ### A. Identitas Praktikum
 
-- **Nama:** M.Ridwan Al Mahri
-- **NIM:** 312510157
-- **Program Studi:** Teknik Informatika
-- **Mata Kuliah:** Pemrograman Web
-- **Pertemuan:** 6
-- **Repository:** Lab5javascript
+- Nama: M.Ridwan Al Mahri
+- NIM: 312510157
+- Program Studi: Teknik Informatika
+- Mata Kuliah: Pemrograman Web
+- Repository: `Lab5JavaScript`
 
 ### B. Tujuan Praktikum
 
-Praktikum ini bertujuan untuk memahami dasar-dasar JavaScript dan penerapannya pada halaman web. Materi yang dipelajari meliputi output, input pengguna, operasi aritmetika, percabangan, function, manipulasi DOM, event listener, validasi form, dan perulangan.
+Praktikum ini bertujuan untuk memahami dasar-dasar JavaScript, mulai dari menampilkan output, menerima input pengguna, operasi aritmetika, percabangan, function, manipulasi DOM, event listener, validasi form, hingga perulangan.
 
-### C. Perangkat yang Digunakan
+### C. Bahasa Pemrograman dan Teknologi
 
-1. Laptop atau komputer.
-2. Sistem operasi Windows.
-3. Browser Google Chrome atau browser lainnya.
-4. Text editor, seperti Visual Studio Code.
-5. GitHub untuk menyimpan kode dan dokumentasi praktikum.
+| Teknologi | Kegunaan |
+|---|---|
+| HTML | Membuat struktur halaman dan elemen input |
+| JavaScript | Mengatur logika program dan interaksi pengguna |
+| Browser | Menjalankan halaman web dan menampilkan Console |
+| GitHub | Menyimpan kode dan dokumentasi praktikum |
 
-### D. Langkah Kerja
+### D. Langkah Menjalankan Program
 
-1. Membuat repository GitHub dengan nama `Lab5Web`.
-2. Membuat file `index.html` untuk menyusun elemen halaman web.
-3. Membuat file `script.js` untuk menuliskan kode JavaScript.
-4. Menghubungkan kedua file menggunakan tag `<script src="script.js"></script>`.
-5. Menjalankan file `index.html` melalui browser.
-6. Menguji setiap latihan sesuai instruksi modul.
-7. Mengambil screenshot hasil pengujian dan menyimpannya pada folder `screenshots`.
-8. Menambahkan file HTML, JavaScript, screenshot, dan README.md ke repository GitHub.
+1. Buat folder `Lab5Web`.
+2. Simpan kode HTML dengan nama `index.html`.
+3. Simpan kode JavaScript dengan nama `script.js`.
+4. Pastikan file HTML memanggil JavaScript menggunakan `<script src="script.js"></script>`.
+5. Buka `index.html` melalui browser.
+6. Jalankan setiap latihan dan amati hasilnya.
+7. Ambil screenshot hasil pengujian dan simpan di folder `screenshots`.
 
-### E. Hasil Praktikum
+---
 
-#### 1. Latihan 1 — Menampilkan Output
+## E. Hasil Praktikum
 
-Pada latihan ini, JavaScript digunakan untuk mengubah teks pada halaman menjadi "Hello World" menggunakan `textContent`. Perintah `console.log()` digunakan untuk menampilkan pesan yang sama pada Console browser.
+### 1. Latihan 1 — Menampilkan Output
 
-**Hasil:** teks pada halaman berubah menjadi Hello World dan pesan dapat dilihat melalui Console setelah tombol dijalankan.
+**Bahasa pemrograman:** JavaScript
 
-**Dokumentasi:**
+**Kode program (`script.js`):**
 
-![Latihan 1 - Menampilkan Output](screenshots/latihan-1.png)
+```javascript
+<img width="1326" height="143" alt="Screenshot 2026-10-19 135216" src="https://github.com/user-attachments/assets/741a0f34-24b2-4f34-99fa-35632beff361" />
 
-#### 2. Latihan 2 — Alert dan Prompt
+<img width="1919" height="213" alt="Screenshot 2026-10-19 135252" src="https://github.com/user-attachments/assets/39772256-d5a9-4660-ba71-c56b31dac0d3" />
 
-Latihan ini menggunakan `prompt()` untuk menerima nama pengguna dan `alert()` untuk menampilkan pesan. Program memeriksa apakah nama telah diisi. Jika nama tersedia, halaman menampilkan pesan selamat datang. Jika input kosong atau pengguna menekan Cancel, program menampilkan pesan bahwa nama belum diisi.
+```
 
-**Hasil:** program dapat menerima nama dan memberikan respons sesuai input pengguna.
+**Elemen HTML:**
 
-**Dokumentasi:**
+```html
+<img width="1465" height="46" alt="Screenshot 2026-10-19 192142" src="https://github.com/user-attachments/assets/60dbf7a7-f509-4a10-916e-55e232bac855" />
 
-![Latihan 2 - Alert dan Prompt](screenshots/latihan-2.png)
+<img width="482" height="198" alt="Screenshot 2026-10-19 192230" src="https://github.com/user-attachments/assets/1bfc9a44-aecb-48c9-ac10-bb2d73963b1e" />
 
-#### 3. Latihan 3 — Function dan Operasi Aritmetika
+```
 
-Latihan ini menggunakan function `operasiDasar(a, b)` untuk menghitung penjumlahan, pengurangan, perkalian, pembagian, dan modulus. Function dijalankan menggunakan bilangan 9 dan 4.
+**Penjelasan:**
+
+`getElementById()` digunakan untuk memilih elemen dengan ID `pesan`. Properti `textContent` mengubah teks pada halaman, sedangkan `console.log()` menampilkan pesan di Console browser.
+
+**Hasil yang diharapkan:**
+
+- Teks `Teks awal` berubah menjadi `Hello World`.
+- Console menampilkan `Hello World`.
+
+**Screenshot:**
+
+![Latihan 1](screenshots/latihan-1.png)
+
+### 2. Latihan 2 — Alert dan Prompt
+
+**Bahasa pemrograman:** JavaScript
+
+**Kode program (`script.js`):**
+
+```javascript
+function latihan2() {
+    const namaPengguna = prompt("Masukkan nama Anda:", "");
+
+    if (namaPengguna && namaPengguna.trim() !== "") {
+        alert("Halo, " + namaPengguna + "!");
+        document.getElementById("pesan").textContent =
+            "Selamat datang, " + namaPengguna + ".";
+    } else {
+        alert("Nama belum diisi.");
+    }
+}
+```
+
+**Elemen HTML:**
+
+```html
+<h3>Alert dan Prompt</h3>
+<button type="button" onclick="latihan2()">Masukkan Nama</button>
+```
+
+**Penjelasan:**
+
+`prompt()` meminta pengguna memasukkan nama. Jika nama diisi, `alert()` menampilkan sapaan dan teks pada halaman diperbarui. Jika pengguna menekan Cancel atau memasukkan teks kosong, program menampilkan pesan bahwa nama belum diisi.
+
+**Hasil yang diharapkan:**
+
+Jika nama yang dimasukkan adalah Andi, program menampilkan `Halo, Andi!` dan teks halaman menjadi `Selamat datang, Andi.`
+
+**Screenshot:**
+
+![Latihan 2](screenshots/latihan-2.png)
+
+### 3. Latihan 3 — Function dan Operasi Aritmetika
+
+**Bahasa pemrograman:** JavaScript
+
+**Kode program (`script.js`):**
+
+```javascript
+function operasiDasar(a, b) {
+    console.log("Penjumlahan:", a + b);
+    console.log("Pengurangan:", a - b);
+    console.log("Perkalian:", a * b);
+    console.log("Pembagian:", b !== 0 ? a / b : "Tidak dapat dibagi nol");
+    console.log("Modulus:", a % b);
+}
+
+function latihan3() {
+    operasiDasar(9, 4);
+}
+```
+
+**Elemen HTML:**
+
+```html
+<button type="button" onclick="latihan3()">
+    Jalankan Operasi Aritmetika
+</button>
+```
+
+**Penjelasan:**
+
+Function `operasiDasar(a, b)` menerima dua parameter dan menghitung lima operasi aritmetika. Hasil ditampilkan melalui Console browser.
+
+**Hasil pengujian dengan angka 9 dan 4:**
+
+| Operasi | Hasil |
+|---|---:|
+| Penjumlahan | 13 |
+| Pengurangan | 5 |
+| Perkalian | 36 |
+| Pembagian | 2.25 |
+| Modulus | 1 |
+
+**Screenshot:**
+
+![Latihan 3](screenshots/latihan-3.png)
+
+### 4. Latihan 4 — Seleksi Kondisi if–else
+
+**Bahasa pemrograman:** JavaScript
+
+**Kode program (`script.js`):**
+
+```javascript
+function latihan4() {
+    const inputNilai = prompt("Masukkan nilai (0–100):");
+    const nilaiMahasiswa = Number(inputNilai);
+
+    if (
+        inputNilai === null ||
+        inputNilai.trim() === "" ||
+        Number.isNaN(nilaiMahasiswa) ||
+        nilaiMahasiswa < 0 ||
+        nilaiMahasiswa > 100
+    ) {
+        alert("Input nilai tidak valid.");
+    } else if (nilaiMahasiswa >= 60) {
+        alert("Lulus");
+    } else {
+        alert("Belum lulus");
+    }
+}
+```
+
+**Elemen HTML:**
+
+```html
+<button type="button" onclick="latihan4()">Periksa Nilai</button>
+```
+
+**Penjelasan:**
+
+Program meminta nilai menggunakan `prompt()`, lalu mengubah input menjadi number dengan `Number()`. Kondisi `if–else` menentukan apakah nilai valid, lulus, atau belum lulus.
 
 **Hasil pengujian:**
 
-- Penjumlahan: 13
-- Pengurangan: 5
-- Perkalian: 36
-- Pembagian: 2,25
-- Modulus: 1
-
-Hasil operasi ditampilkan pada Console browser.
-
-**Dokumentasi:**
-
-![Latihan 3 - Operasi Aritmetika](screenshots/latihan-3.png)
-
-#### 4. Latihan 4 — Seleksi Kondisi if–else
-
-Program meminta pengguna memasukkan nilai antara 0 dan 100. Nilai dikonversi menjadi tipe number, kemudian diperiksa menggunakan kondisi `if–else`.
-
-**Hasil:** nilai minimal 60 dinyatakan lulus. Nilai di bawah 60 dinyatakan belum lulus. Input kosong, pembatalan prompt, dan nilai di luar rentang ditolak.
-
-**Dokumentasi:**
-
-![Latihan 4 - Seleksi Kondisi](screenshots/latihan-4.png)
-
-#### 5. Latihan 5 — Seleksi Kondisi switch
-
-Latihan ini menggunakan `switch` untuk memeriksa pilihan angka 1 sampai 5. Setiap pilihan menampilkan nama bilangan yang sesuai.
-
-**Hasil:** angka 1–5 menampilkan nama bilangan masing-masing, sedangkan pilihan lain menampilkan pesan "Pilihan tidak tersedia".
-
-**Dokumentasi:**
-
-![Latihan 5 - Switch](screenshots/latihan-5.png)
-
-#### 6. Latihan 6 — Bilangan Genap atau Ganjil
-
-Program menerima bilangan melalui input HTML. JavaScript memeriksa apakah input berupa bilangan bulat, kemudian menggunakan operator modulus (`%`) untuk menentukan apakah bilangan tersebut genap atau ganjil.
-
-**Hasil:** program menampilkan hasil pemeriksaan pada halaman. Bilangan positif, negatif, dan nol dapat diperiksa, sedangkan bilangan desimal dan input kosong ditolak sebagai input yang tidak valid.
-
-**Dokumentasi:**
-
-![Latihan 6 - Genap atau Ganjil](screenshots/latihan-6.png)
-
-#### 7. Latihan 7 — Mengubah Warna Halaman
-
-Latihan ini menggunakan function `ubahWarnaLatar(warna)` dengan parameter warna. Tiga tombol disediakan untuk mengubah warna latar halaman menjadi hijau muda, putih, dan kuning muda.
-
-**Hasil:** warna latar halaman berubah sesuai tombol yang ditekan.
-
-**Dokumentasi:**
-
-![Latihan 7 - Mengubah Warna](screenshots/latihan-7.png)
-
-#### 8. Latihan 8 — DOM dan Checkbox Menu Makanan
-
-Latihan ini menggunakan checkbox untuk memilih menu makanan. JavaScript memanfaatkan `querySelectorAll()` dan `addEventListener()` untuk mendeteksi perubahan pilihan, kemudian menghitung total harga menu yang dicentang.
-
-Menu yang tersedia:
-
-- Ayam Goreng: Rp5.000
-- Tempe: Rp500
-- Telur Dadar: Rp2.500
-
-**Hasil:** total harga berubah otomatis saat checkbox dipilih atau dilepas. Dua menu tambahan, yaitu Bakwan Rp3.000 dan Es Teh Rp4.000, juga dihitung dalam total yang sama.
-
-**Dokumentasi:**
-
-![Latihan 8 - Checkbox Menu Makanan](screenshots/latihan-8.png)
-
-### F. Mini Project — Kalkulator Nilai Mahasiswa
-
-Mini project ini menghitung nilai akhir mahasiswa berdasarkan nilai tugas, UTS, dan UAS. Bobot yang digunakan adalah 30% untuk tugas, 30% untuk UTS, dan 40% untuk UAS.
-
-Predikat ditentukan berdasarkan nilai akhir:
-
-| Nilai akhir | Predikat |
+| Input | Hasil |
 |---|---|
-| 85–100 | A |
-| 75–kurang dari 85 | B |
-| 60–kurang dari 75 | C |
-| 50–kurang dari 60 | D |
-| Di bawah 50 | E |
+| 80 | Lulus |
+| 50 | Belum lulus |
+| 110 | Input nilai tidak valid |
+| Kosong atau Cancel | Input nilai tidak valid |
 
-Status kelulusan ditentukan berdasarkan nilai akhir minimal 60. Program juga memvalidasi agar setiap nilai berada dalam rentang 0–100.
+**Screenshot:**
 
-**Contoh pengujian:**
+![Latihan 4](screenshots/latihan-4.png)
+
+### 5. Latihan 5 — Seleksi Kondisi switch
+
+**Bahasa pemrograman:** JavaScript
+
+**Kode program (`script.js`):**
+
+```javascript
+function latihan5() {
+    const inputPilihan = prompt("Masukkan angka 1–5:");
+
+    switch (inputPilihan) {
+        case "1":
+            alert("Bilangan satu");
+            break;
+        case "2":
+            alert("Bilangan dua");
+            break;
+        case "3":
+            alert("Bilangan tiga");
+            break;
+        case "4":
+            alert("Bilangan empat");
+            break;
+        case "5":
+            alert("Bilangan lima");
+            break;
+        default:
+            alert("Pilihan tidak tersedia");
+    }
+}
+```
+
+**Elemen HTML:**
+
+```html
+<button type="button" onclick="latihan5()">Pilih Bilangan 1-5</button>
+```
+
+**Penjelasan:**
+
+`switch` membandingkan input dengan beberapa pilihan. `break` menghentikan proses pada pilihan yang cocok, sedangkan `default` dijalankan jika tidak ada pilihan yang sesuai.
+
+**Hasil yang diharapkan:**
+
+Input `3` menampilkan `Bilangan tiga`. Input selain 1–5 menampilkan `Pilihan tidak tersedia`.
+
+**Screenshot:**
+
+![Latihan 5](screenshots/latihan-5.png)
+
+### 6. Latihan 6 — Bilangan Genap atau Ganjil
+
+**Bahasa pemrograman:** HTML dan JavaScript
+
+**Kode HTML (`index.html`):**
+
+```html
+<label for="bilangan">Masukkan bilangan bulat:</label>
+<input type="number" id="bilangan" step="1">
+<button type="button" onclick="cekBilangan()">Periksa</button>
+<p id="hasilBilangan"></p>
+```
+
+**Kode JavaScript (`script.js`):**
+
+```javascript
+function cekBilangan() {
+    const input = document.getElementById("bilangan").value;
+    const angka = Number(input);
+    const hasil = document.getElementById("hasilBilangan");
+
+    if (input.trim() === "" || !Number.isInteger(angka)) {
+        hasil.textContent = "Masukkan bilangan bulat yang valid.";
+    } else if (angka % 2 === 0) {
+        hasil.textContent = "Bilangan genap";
+    } else {
+        hasil.textContent = "Bilangan ganjil";
+    }
+}
+```
+
+**Penjelasan:**
+
+HTML menyediakan input bilangan dan tombol pemeriksaan. JavaScript menggunakan `Number.isInteger()` untuk memeriksa bilangan bulat dan operator modulus untuk menentukan genap atau ganjil.
+
+**Hasil pengujian:**
+
+| Input | Hasil |
+|---:|---|
+| 4 | Bilangan genap |
+| 7 | Bilangan ganjil |
+| -2 | Bilangan genap |
+| 0 | Bilangan genap |
+| 2.5 | Masukkan bilangan bulat yang valid |
+| Kosong | Masukkan bilangan bulat yang valid |
+
+**Screenshot:**
+
+![Latihan 6](screenshots/latihan-6.png)
+
+### 7. Latihan 7 — Mengubah Warna Halaman
+
+**Bahasa pemrograman:** HTML dan JavaScript
+
+**Kode HTML (`index.html`):**
+
+```html
+<button type="button" onclick="ubahWarnaLatar('lightgreen')">
+    Latar Hijau
+</button>
+
+<button type="button" onclick="ubahWarnaLatar('white')">
+    Latar Putih
+</button>
+
+<button type="button" onclick="ubahWarnaLatar('lightyellow')">
+    Latar Kuning
+</button>
+```
+
+**Kode JavaScript (`script.js`):**
+
+```javascript
+function ubahWarnaLatar(warna) {
+    document.body.style.backgroundColor = warna;
+}
+```
+
+**Penjelasan:**
+
+Function menerima parameter `warna`, lalu mengubah properti `backgroundColor` pada elemen `body`. Dengan satu function, ketiga tombol dapat menggunakan logika yang sama.
+
+**Hasil yang diharapkan:**
+
+Latar halaman berubah menjadi hijau muda, putih, atau kuning muda sesuai tombol yang ditekan.
+
+**Screenshot:**
+
+![Latihan 7](screenshots/latihan-7.png)
+
+### 8. Latihan 8 — DOM dan Checkbox Menu Makanan
+
+**Bahasa pemrograman:** HTML dan JavaScript
+
+**Kode HTML (`index.html`):**
+
+```html
+<h3>Daftar Menu Makanan</h3>
+
+<label>
+    <input type="checkbox" class="menu" value="5000">
+    Ayam Goreng — Rp5.000
+</label>
+<br>
+
+<label>
+    <input type="checkbox" class="menu" value="500">
+    Tempe — Rp500
+</label>
+<br>
+
+<label>
+    <input type="checkbox" class="menu" value="2500">
+    Telur Dadar — Rp2.500
+</label>
+<br>
+
+<p>Total: Rp<span id="total">0</span></p>
+```
+
+**Kode JavaScript (`script.js`):**
+
+```javascript
+const daftarMenu = document.querySelectorAll(".menu");
+
+daftarMenu.forEach((item) => {
+    item.addEventListener("change", hitungTotal);
+});
+
+function hitungTotal() {
+    let total = 0;
+
+    daftarMenu.forEach((item) => {
+        if (item.checked) {
+            total += Number(item.value);
+        }
+    });
+
+    document.getElementById("total").textContent =
+        total.toLocaleString("id-ID");
+}
+```
+
+**Penjelasan:**
+
+`querySelectorAll()` memilih seluruh checkbox dengan class `menu`. Event `change` menjalankan `hitungTotal()` setiap kali pilihan berubah. Total harga ditampilkan dengan format angka Indonesia.
+
+**Hasil pengujian:**
+
+| Pilihan | Total |
+|---|---:|
+| Tidak ada menu dipilih | Rp0 |
+| Ayam Goreng | Rp5.000 |
+| Ayam Goreng dan Tempe | Rp5.500 |
+| Semua tiga menu | Rp8.000 |
+
+Dua menu tambahan pada Eksperimen Mandiri, yaitu Bakwan Rp3.000 dan Es Teh Rp4.000, juga masuk ke perhitungan karena memakai class `menu` yang sama.
+
+**Screenshot:**
+
+![Latihan 8](screenshots/latihan-8.png)
+
+---
+
+## F. Mini Project — Kalkulator Nilai Mahasiswa
+
+**Bahasa pemrograman:** HTML dan JavaScript
+
+### 1. Kode HTML
+
+```html
+<form id="formNilai">
+    <label for="tugas">Nilai Tugas:</label>
+    <input type="number" id="tugas" min="0" max="100" required>
+    <br><br>
+
+    <label for="uts">Nilai UTS:</label>
+    <input type="number" id="uts" min="0" max="100" required>
+    <br><br>
+
+    <label for="uas">Nilai UAS:</label>
+    <input type="number" id="uas" min="0" max="100" required>
+    <br><br>
+
+    <button type="submit">Hitung Nilai</button>
+</form>
+
+<div id="hasilNilai"></div>
+```
+
+### 2. Kode JavaScript
+
+```javascript
+function hitungNilaiAkhir(tugas, uts, uas) {
+    return tugas * 0.30 + uts * 0.30 + uas * 0.40;
+}
+
+function tentukanPredikat(nilai) {
+    if (nilai >= 85) return "A";
+    if (nilai >= 75) return "B";
+    if (nilai >= 60) return "C";
+    if (nilai >= 50) return "D";
+    return "E";
+}
+```
+
+Kode di atas merupakan dua function dasar. Kode lengkap pada `script.js` juga mencakup pengambilan nilai dari form, validasi rentang, penentuan status, dan penampilan hasil pada halaman.
+
+### 3. Penjelasan
+
+Nilai akhir dihitung dengan bobot tugas 30%, UTS 30%, dan UAS 40%. Function `tentukanPredikat()` menentukan predikat berdasarkan nilai akhir. Program menetapkan status lulus jika nilai akhir minimal 60.
+
+### 4. Hasil pengujian
 
 | Tugas | UTS | UAS | Nilai akhir | Predikat | Status |
 |---:|---:|---:|---:|:---:|---|
@@ -153,7 +476,7 @@ Status kelulusan ditentukan berdasarkan nilai akhir minimal 60. Program juga mem
 | 50 | 55 | 45 | 49,50 | E | Belum lulus |
 | 90 | 90 | 90 | 90,00 | A | Lulus |
 
-**Dokumentasi pengujian:**
+**Screenshot pengujian:**
 
 ![Mini Project - Pengujian 1](screenshots/mini-project-1.png)
 
@@ -161,59 +484,193 @@ Status kelulusan ditentukan berdasarkan nilai akhir minimal 60. Program juga mem
 
 ![Mini Project - Pengujian 3](screenshots/mini-project-3.png)
 
-### G. Eksperimen Mandiri
+---
 
-#### 1. Nomor 1 — Operasi Aritmetika dengan Prompt
+## G. Eksperimen Mandiri
 
-Program meminta dua bilangan melalui `prompt()`, mengonversinya menjadi number, lalu menjalankan function `operasiDasar()`.
+### 1. Nomor 1 — Operasi Aritmetika dengan Prompt
 
-**Hasil:** operasi aritmetika ditampilkan pada Console browser.
+**Bahasa pemrograman:** JavaScript
 
-![Eksperimen 1 - Operasi Aritmetika](screenshots/eksperimen-1.png)
+```javascript
+function eksperimenAritmetika() {
+    const inputA = prompt("Masukkan bilangan pertama:");
 
-#### 2. Nomor 7 — Tabel Perkalian Angka 7
+    if (inputA === null || inputA.trim() === "") {
+        alert("Bilangan pertama harus diisi.");
+        return;
+    }
 
-Program menggunakan perulangan `for` untuk menampilkan perkalian angka 7 dari 1 sampai 10.
+    const inputB = prompt("Masukkan bilangan kedua:");
 
-**Hasil:** tabel perkalian ditampilkan pada Console browser.
+    if (inputB === null || inputB.trim() === "") {
+        alert("Bilangan kedua harus diisi.");
+        return;
+    }
 
-![Eksperimen 7 - Tabel Perkalian](screenshots/eksperimen-7.png)
+    const a = Number(inputA);
+    const b = Number(inputB);
 
-#### 3. Nomor 8 — Function cekGenap()
+    if (!Number.isFinite(a) || !Number.isFinite(b)) {
+        alert("Masukkan bilangan yang valid.");
+        return;
+    }
 
-Function `cekGenap(angka)` mengembalikan nilai `true` jika bilangan bulat yang diberikan adalah genap dan `false` jika bukan bilangan bulat genap.
+    operasiDasar(a, b);
+}
+```
 
-**Hasil:** fungsi diuji menggunakan angka 4, 7, dan 0 melalui Console.
+**Penjelasan:** program menerima dua input, mengubahnya menjadi number, lalu memanggil `operasiDasar()`.
 
-![Eksperimen 8 - Cek Genap](screenshots/eksperimen-8.png)
+**Hasil:** seluruh operasi aritmetika ditampilkan pada Console.
 
-#### 4. Nomor 9 — Validasi Form
+![Eksperimen 1](screenshots/eksperimen-1.png)
 
-Program memeriksa apakah kolom nama dan nilai telah diisi. Nilai harus berada dalam rentang 0–100.
+### 2. Nomor 7 — Tabel Perkalian Angka 7
 
-**Hasil:** data yang sesuai akan menampilkan pesan bahwa data valid, sedangkan data kosong atau nilai di luar rentang akan menghasilkan pesan kesalahan.
+**Bahasa pemrograman:** JavaScript
 
-![Eksperimen 9 - Validasi Form](screenshots/eksperimen-9.png)
+```javascript
+function tabelPerkalian() {
+    for (let i = 1; i <= 10; i++) {
+        console.log("7 x " + i + " = " + (7 * i));
+    }
+}
+```
 
-#### 5. Nomor 10 — Penambahan Menu Makanan
+**Penjelasan:** perulangan `for` menjalankan perhitungan dari 1 sampai 10.
 
-Dua pilihan menu tambahan dimasukkan ke dalam daftar checkbox, yaitu Bakwan dan Es Teh. Kedua menu menggunakan class `menu` yang sama sehingga total harga dihitung bersama menu sebelumnya.
+**Hasil yang diharapkan:** Console menampilkan `7 x 1 = 7` sampai `7 x 10 = 70`.
 
-**Hasil:** harga menu tambahan ikut diperhitungkan secara otomatis.
+![Eksperimen 7](screenshots/eksperimen-7.png)
 
-![Eksperimen 10 - Menu Tambahan](screenshots/eksperimen-10.png)
+### 3. Nomor 8 — Function cekGenap()
 
-#### 6. Nomor 11 — Menyembunyikan dan Menampilkan Elemen
+**Bahasa pemrograman:** JavaScript
 
-Program menggunakan function `toggleTeks()` untuk mengubah properti `display` pada elemen HTML.
+```javascript
+function cekGenap(angka) {
+    return Number.isInteger(angka) && angka % 2 === 0;
+}
 
-**Hasil:** teks dapat disembunyikan dan ditampilkan kembali menggunakan tombol.
+function ujiGenap() {
+    console.log("4 genap:", cekGenap(4));
+    console.log("7 genap:", cekGenap(7));
+    console.log("0 genap:", cekGenap(0));
+}
+```
 
-![Eksperimen 11 - Toggle Teks](screenshots/eksperimen-11.png)
+**Penjelasan:** function mengembalikan `true` jika parameter berupa bilangan bulat genap. Selain itu, hasilnya `false`.
 
-### H. Kesimpulan
+**Hasil pengujian:** angka 4 menghasilkan `true`, angka 7 menghasilkan `false`, dan angka 0 menghasilkan `true`.
 
-Berdasarkan praktikum yang dilakukan, JavaScript dapat digunakan untuk membuat halaman web lebih interaktif. Materi yang dipelajari mencakup penampilan output, pengambilan input, operasi aritmetika, percabangan, function, manipulasi DOM, event listener, validasi form, dan perulangan.
+![Eksperimen 8](screenshots/eksperimen-8.png)
 
-Melalui latihan dan mini project, konsep dasar JavaScript diterapkan untuk membuat pemeriksaan bilangan, perubahan warna halaman, perhitungan harga menu, serta kalkulator nilai mahasiswa.
+### 4. Nomor 9 — Validasi Form
 
+**Bahasa pemrograman:** HTML dan JavaScript
+
+```javascript
+document.getElementById("formValidasi").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nama = document.getElementById("nama").value.trim();
+    const inputNilai = document.getElementById("nilai").value;
+    const nilai = Number(inputNilai);
+    const hasil = document.getElementById("hasilValidasi");
+
+    if (nama === "" || inputNilai.trim() === "") {
+        hasil.textContent = "Nama dan nilai wajib diisi.";
+    } else if (
+        !Number.isFinite(nilai) ||
+        nilai < 0 ||
+        nilai > 100
+    ) {
+        hasil.textContent = "Nilai harus berada pada rentang 0–100.";
+    } else {
+        hasil.textContent =
+            "Data valid. Nama: " + nama + ", nilai: " + nilai;
+    }
+});
+```
+
+**Penjelasan:** program memeriksa nama dan nilai. Nama tidak boleh kosong, sedangkan nilai harus berada di antara 0 dan 100.
+
+**Hasil:** data valid menampilkan informasi nama dan nilai. Input kosong atau nilai di luar rentang menampilkan pesan kesalahan.
+
+![Eksperimen 9](screenshots/eksperimen-9.png)
+
+### 5. Nomor 10 — Penambahan Menu Makanan
+
+**Bahasa pemrograman:** HTML
+
+```html
+<label>
+    <input type="checkbox" class="menu" value="3000">
+    Bakwan — Rp3.000
+</label>
+<br>
+
+<label>
+    <input type="checkbox" class="menu" value="4000">
+    Es Teh — Rp4.000
+</label>
+<br>
+```
+
+**Penjelasan:** dua pilihan menu ditambahkan menggunakan class `menu` dan nilai harga masing-masing. JavaScript Latihan 8 menghitung menu tambahan ini bersama menu awal.
+
+**Hasil:** ketika Bakwan dipilih, total bertambah Rp3.000. Ketika Es Teh dipilih, total bertambah Rp4.000.
+
+![Eksperimen 10](screenshots/eksperimen-10.png)
+
+### 6. Nomor 11 — Menyembunyikan dan Menampilkan Elemen
+
+**Bahasa pemrograman:** HTML dan JavaScript
+
+```html
+<p id="teksEksperimen">
+    Ini adalah teks yang bisa disembunyikan.
+</p>
+
+<button type="button" onclick="toggleTeks()">
+    Sembunyikan / Tampilkan Teks
+</button>
+```
+
+```javascript
+function toggleTeks() {
+    const teks = document.getElementById("teksEksperimen");
+
+    if (teks.style.display === "none") {
+        teks.style.display = "block";
+    } else {
+        teks.style.display = "none";
+    }
+}
+```
+
+**Penjelasan:** JavaScript mengubah properti `display` untuk menyembunyikan atau menampilkan kembali elemen paragraf.
+
+**Hasil:** teks menghilang saat tombol ditekan dan dapat ditampilkan kembali dengan menekan tombol tersebut sekali lagi.
+
+![Eksperimen 11](screenshots/eksperimen-11.png)
+
+---
+
+## H. Kesimpulan
+
+Praktikum ini memperkenalkan penggunaan JavaScript untuk membuat halaman web yang interaktif. Melalui latihan yang dilakukan, dipelajari penggunaan output, input pengguna, operasi aritmetika, percabangan, function, manipulasi DOM, event listener, validasi form, dan perulangan.
+
+Mini project menunjukkan penerapan JavaScript untuk menghitung nilai akhir mahasiswa, menentukan predikat, serta memeriksa status kelulusan berdasarkan ketentuan nilai.
+
+## I. Pengumpulan
+
+File yang dikumpulkan dalam repository `Lab5Web`:
+
+- `index.html`
+- `script.js`
+- `README.md`
+- Folder `screenshots`
+
+**URL Repository GitHub:** [Masukkan URL repository di sini]
