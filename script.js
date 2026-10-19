@@ -59,6 +59,12 @@ if (input.trim() === "" || !Number.isInteger(angka)) {
     }
 }
 
+
+// Mengubah warna latar belakang
+function ubahWarnaLatar(warna) {
+    document.body.style.backgroundColor = warna;
+}
+
 // DOM dan checkbox menu makanan
 const daftarMenu = document.querySelectorAll(".menu");
 daftarMenu.forEach((item) => {
@@ -73,10 +79,11 @@ function hitungTotal() {
     document.getElementById("total").textContent = total.toLocaleString("id-ID");
 }
 
-// Mini Project — Kalkulator Nilai Mahasiswa
+// Project: Kalkulator Nilai
 function hitungNilaiAkhir(tugas, uts, uas) {
-return tugas * 0.30 + uts * 0.30 + uas * 0.40;
+    return tugas * 0.30 + uts * 0.30 + uas * 0.40;
 }
+
 function tentukanPredikat(nilai) {
     if (nilai >= 85) return "A";
     if (nilai >= 75) return "B";
@@ -84,11 +91,124 @@ function tentukanPredikat(nilai) {
     if (nilai >= 50) return "D";
     return "E";
 }
-const tugas = 85;
-const uts = 78;
-const uas = 88;
-const akhir = hitungNilaiAkhir(tugas, uts, uas);
 
-console.log("Nilai akhir:", akhir.toFixed(2));
-console.log("Predikat:", tentukanPredikat(akhir));
-console.log("Status:", akhir >= 60 ? "Lulus" : "Belum lulus");
+document.getElementById("formNilai").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const inputTugas = document.getElementById("tugas").value;
+    const inputUTS = document.getElementById("uts").value;
+    const inputUAS = document.getElementById("uas").value;
+    const hasil = document.getElementById("hasilNilai");
+
+    if (
+        inputTugas.trim() === "" ||
+        inputUTS.trim() === "" ||
+        inputUAS.trim() === ""
+    ) {
+        hasil.textContent = "Semua nilai harus diisi.";
+        return;
+    }
+
+    const tugas = Number(inputTugas);
+    const uts = Number(inputUTS);
+    const uas = Number(inputUAS);
+
+    if (
+        !Number.isFinite(tugas) ||
+        !Number.isFinite(uts) ||
+        !Number.isFinite(uas) ||
+        tugas < 0 || tugas > 100 ||
+        uts < 0 || uts > 100 ||
+        uas < 0 || uas > 100
+    ) {
+        hasil.textContent = "Setiap nilai harus berada pada rentang 0–100.";
+        return;
+    }
+
+    const akhir = hitungNilaiAkhir(tugas, uts, uas);
+    const predikat = tentukanPredikat(akhir);
+    const status = akhir >= 60 ? "Lulus" : "Belum lulus";
+
+    hasil.innerHTML =
+        "<h3>Hasil Perhitungan</h3>" +
+        "<p>Nilai akhir: " + akhir.toFixed(2) + "</p>" +
+        "<p>Predikat: " + predikat + "</p>" +
+        "<p>Status: " + status + "</p>";
+
+    console.log("Nilai akhir:", akhir.toFixed(2));
+    console.log("Predikat:", predikat);
+    console.log("Status:", status);
+});
+
+// Ekperimen mandiri 1 Menginput dua bilangan dari prompt
+function eksperimenAritmetika() {
+    const inputA = prompt("Masukkan bilangan pertama:");
+
+    if (inputA === null || inputA.trim() === "") {
+        alert("Bilangan pertama harus diisi.");
+        return;
+    }
+
+    const inputB = prompt("Masukkan bilangan kedua:");
+
+    if (inputB === null || inputB.trim() === "") {
+        alert("Bilangan kedua harus diisi.");
+        return;
+    }
+
+    const a = Number(inputA);
+    const b = Number(inputB);
+
+    if (!Number.isFinite(a) || !Number.isFinite(b)) {
+        alert("Masukkan bilangan yang valid.");
+        return;
+    }
+
+    operasiDasar(a, b);
+}
+
+
+// Ekperimen mandiri 8 Funtion cek genap
+function cekGenap(angka) {
+    return Number.isInteger(angka) && angka % 2 === 0;
+}
+
+function ujiGenap() {
+    console.log("4 genap:", cekGenap(4));
+    console.log("7 genap:", cekGenap(7));
+    console.log("0 genap:", cekGenap(0));
+}
+
+// Ekperimen mandiri 9 Validasi from
+document.getElementById("formValidasi").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nama = document.getElementById("nama").value.trim();
+    const inputNilai = document.getElementById("nilai").value;
+    const nilai = Number(inputNilai);
+    const hasil = document.getElementById("hasilValidasi");
+
+    if (nama === "" || inputNilai.trim() === "") {
+        hasil.textContent = "Nama dan nilai wajib diisi.";
+    } else if (
+        !Number.isFinite(nilai) ||
+        nilai < 0 ||
+        nilai > 100
+    ) {
+        hasil.textContent = "Nilai harus berada pada rentang 0–100.";
+    } else {
+        hasil.textContent =
+            "Data valid. Nama: " + nama + ", nilai: " + nilai;
+    }
+});
+
+// Ekperimen mandiri 11 Sembunyikan dan tampilkan teks
+function toggleTeks() {
+    const teks = document.getElementById("teksEksperimen");
+
+    if (teks.style.display === "none") {
+        teks.style.display = "block";
+    } else {
+        teks.style.display = "none";
+    }
+}

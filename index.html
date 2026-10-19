@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Praktikum JavaScript</title>
+<title>Praktikum JavaScript</titSle>
 </head>
 <body>
 <h1>Pengenalan JavaScript</h1>
@@ -17,7 +17,7 @@
 <button type="button" onclick="cekBilangan()">Periksa</button>
 <p id="hasilBilangan"></p>
 
-<!-- Form bilangan genap atau ganjil-->
+<!-- Mengubah warna latar belakang -->
 <button type="button" onclick="ubahWarnaLatar('lightgreen')">Latar Hijau</button>
 <button type="button" onclick="ubahWarnaLatar('white')">Latar Putih</button>
 <button type="button" onclick="ubahWarnaLatar('lightyellow')">Latar Kuning</button>
@@ -29,6 +29,84 @@
 <label><input type="checkbox" class="menu" value="2500"> Telur Dadar — Rp2.500</label><br>
 <p>Total: Rp<span id="total">0</span></p>
 
+ <section>
+        <h2>Mini Project — Kalkulator Nilai Mahasiswa</h2>
 
+        <form id="formNilai">
+            <label for="tugas">Nilai Tugas (0–100):</label><br>
+            <input type="number" id="tugas" min="0" max="100" step="any" required><br>
+
+            <label for="uts">Nilai UTS (0–100):</label><br>
+            <input type="number" id="uts" min="0" max="100" step="any" required><br>
+
+            <label for="uas">Nilai UAS (0–100):</label><br>
+            <input type="number" id="uas" min="0" max="100" step="any" required><br>
+
+            <button type="submit">Hitung Nilai Akhir</button>
+        </form>
+
+        <div id="hasilNilai" aria-live="polite"></div>
+    </section>
+
+    <!-- Eksperimen Mandiri -->
+    <section>
+         <!-- EKSPERIMEN MANDIRI 1 -->
+    <h2>Eksperimen Mandiri</h2>
+
+    <h3>Nomor 1 - Operasi Aritmetika dengan Prompt</h3>
+    <button type="button" onclick="eksperimenAritmetika()">
+        Masukkan Dua Bilangan
+    </button>
+
+    <h3>Nomor 7 - Tabel Perkalian 7</h3>
+    <button type="button" onclick="tabelPerkalian()">
+        Tampilkan Tabel Perkalian
+    </button>
+    <p>Lihat hasilnya pada Console browser.</p>
+
+    <h3>Nomor 8 - Function cekGenap()</h3>
+    <button type="button" onclick="ujiGenap()">
+        Uji Bilangan Genap
+    </button>
+    <p>Lihat hasilnya pada Console browser.</p>
+
+    <h3>Nomor 9 - Validasi Form</h3>
+
+    <form id="formValidasi">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama">
+        <br><br>
+
+        <label for="nilai">Nilai (0-100):</label>
+        <input type="number" id="nilai">
+        <br><br>
+
+        <button type="submit">Periksa Data</button>
+    </form>
+
+    <p id="hasilValidasi"></p>
+
+    <h3>Nomor 10 - Penambahan Menu Makanan</h3>
+    <p>Menu tambahan untuk latihan checkbox:</p>
+
+    <label>
+        <input type="checkbox" class="menu" value="3000">
+        Bakwan — Rp3.000
+    </label>
+    <br>
+
+    <label>
+        <input type="checkbox" class="menu" value="4000">
+        Es Teh — Rp4.000
+    </label>
+    <br>
+
+    <p>Semua pilihan menu dihitung dalam total yang sama.</p>
+
+    <h3>Nomor 11 - Menyembunyikan dan Menampilkan Elemen</h3>
+    <p id="teksEksperimen">Ini adalah teks yang bisa disembunyikan.</p>
+    <button type="button" onclick="toggleTeks()">
+        Sembunyikan / Tampilkan Teks
+    </button>
 </body>
 </html>
